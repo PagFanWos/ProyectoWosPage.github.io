@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+  background-image: url("recursos graficos/discografiafondo.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Agrega un margen superior al contenido principal para evitar superposición */
+main {
+  margin-top: 120px; /* Ajusta este valor según la altura del encabezado */
+}
+
+/* Estilos para el encabezado */
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.container .btn-menu,
+.logo {
+  float: left;
+  line-height: 100px;
+}
+.container .btn-menu label {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.logo h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 10px;
+}
+.container .menu {
+  float: right;
+  line-height: 100px;
+}
+.container .menu a {
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.container .menu a:hover {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+
+/* Estilo para el título principal */
+h1 {
+  font-family: "Ruda", sans-serif;
+  font-size: 24px; /* Tamaño más grande para destacar */
+  color: #fff;
+  text-align: center; /* Centra el texto */
+  margin: 140px auto 20px auto; /* Ajusta posición y separación */
+  background-color: rgba(232, 222, 227, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Listas de discos */
+.listas-discografia {
+  display: flex;
+  flex-wrap: wrap; /* Las listas se adaptan a distintas resoluciones */
+  justify-content: space-around; /* Distribuye las listas uniformemente */
+  padding-top: 20px;
+}
+
+.lista {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: calc(25% - 40px); /* Ajusta según el espacio disponible */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para facilitar la posición interna */
+}
+
+.lista h2 {
+  font-family: fantasy;
+  text-align: center;
+  color: #333;
+}
+
+.lista ul {
+  list-style: none; /* Elimina los puntos */
+}
+
+.lista li {
+  padding: 5px 0;
+  color: #141414;
+}
+
+/* Asegura que los enlaces en h2 hereden estilo */
+.lista h2 a {
+  color: #333;
+  text-decoration: none; /* Sin subrayado */
+  font-family: fantasy; /* Hereda la fuente deseada */
+}
+
+.lista h2 a:hover {
+  color: #007BFF; /* Color al pasar el mouse */
+}
+
+.lista img {
+  display: block; /* Asegura que no esté en línea con el texto */
+  margin: 15px auto 0; /* Centra la imagen dentro del bloque */
+  max-width: 100%; /* Escala según el contenedor */
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Menú lateral */
+#btn-menu {
+  display: none;
+}
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+  z-index: 11;
+}
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+.cont-menu nav {
+  transform: translateY(15%);
+}
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}

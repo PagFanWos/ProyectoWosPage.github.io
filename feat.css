@@ -6,12 +6,13 @@
   font-family: "Montserrat Alternates", sans-serif;
 }
 body {
-  background-image: url("recursos graficos/Biografiafondo.png");
+  background-image: url("recursos graficos/fonsocarrera.png");
   background-attachment: fixed;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
 }
+
 
 /*Estilos para el encabezado*/
 .header {
@@ -63,9 +64,6 @@ body {
 }
 /*Fin de Estilos para el encabezado*/
 
-
-
-
 .dropdown {
   display: inline-block;
   position: relative;
@@ -92,13 +90,56 @@ body {
 
 
 
+/* Listas de discos */
+.listas-discografia {
+  display: flex;
+  flex-wrap: wrap; /* Las listas se adaptan a distintas resoluciones */
+  justify-content: space-around; /* Distribuye las listas uniformemente */
+  padding-top: 20px;
+}
 
+.lista {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para facilitar la posición interna */
+}
 
+.lista h2 {
+  font-family: Arial;
+  text-align: center;
+  color: #333;
+}
 
+.lista ul {
+  list-style: none; /* Elimina los puntos */
+}
 
+.lista li {
+  padding: 5px 0;
+  color: #141414;
+}
 
+/* Asegura que los enlaces en h2 hereden estilo */
+.lista h2 a {
+  color: #333;
+  text-decoration: none; /* Sin subrayado */
+  font-family: fantasy; /* Hereda la fuente deseada */
+}
 
+.lista h2 a:hover {
+  color: #ffe600; /* Color al pasar el mouse */
+}
 
+.lista img {
+  display: block; /* Asegura que no esté en línea con el texto */
+  margin: 15px auto 0; /* Centra la imagen dentro del bloque */
+  max-width: 100%; /* Escala según el contenedor */
+  border-radius: 5px;
+}
 
 
 
@@ -127,19 +168,8 @@ h1 {
   width: 40%; /* Asegura que el texto no ocupe todo el ancho */
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(232, 222, 227, 0.4); 
     z-index: 1;
-}
-
-.wosbiografia {
-  position: relative; /* Establece un contexto de posicionamiento */
-  top: 110px; /* Mueve  hacia abajo */
-  left: 450px; /* Mueve la imagen 100px hacia la derecha */
-}
-.wosbiografia1 {
-  position: relative; /* Establece un contexto de posicionamiento */
-  top: 140px; /* Mueve  hacia abajo */
-  left: 472px; /* Mueve la imagen 100px hacia la derecha */
 }
     
 

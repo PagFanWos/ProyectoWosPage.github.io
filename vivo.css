@@ -6,12 +6,13 @@
   font-family: "Montserrat Alternates", sans-serif;
 }
 body {
-  background-image: url("recursos graficos/Biografiafondo.png");
+  background-image: url("recursos graficos/fonsocarrera.png");
   background-attachment: fixed;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
 }
+
 
 /*Estilos para el encabezado*/
 .header {
@@ -63,9 +64,6 @@ body {
 }
 /*Fin de Estilos para el encabezado*/
 
-
-
-
 .dropdown {
   display: inline-block;
   position: relative;
@@ -87,32 +85,25 @@ body {
   padding: 1px;
   text-decoration: none;
 }
-.dropdown-content a:hover {
+.video-list-container {
+  display: flex;
+  flex-direction: column; /* Organiza los videos en columna */
+  gap: 20px; /* Espacio entre los videos */
+  margin-top: 20px;
 }
 
+.video-item {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efecto de sombra */
+  text-align: center; /* Centra el contenido dentro del bloque */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.video-item h2 {
+  margin-bottom: 10px; /* Espacio entre el título y el video */
+  font-size: 18px;
+  color: #333;
+}
 
 
 
@@ -127,21 +118,12 @@ h1 {
   width: 40%; /* Asegura que el texto no ocupe todo el ancho */
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(232, 222, 227, 0.4); 
     z-index: 1;
 }
-
-.wosbiografia {
-  position: relative; /* Establece un contexto de posicionamiento */
-  top: 110px; /* Mueve  hacia abajo */
-  left: 450px; /* Mueve la imagen 100px hacia la derecha */
-}
-.wosbiografia1 {
-  position: relative; /* Establece un contexto de posicionamiento */
-  top: 140px; /* Mueve  hacia abajo */
-  left: 472px; /* Mueve la imagen 100px hacia la derecha */
-}
     
+
+
 
 footer {
   font-size: 13px;
